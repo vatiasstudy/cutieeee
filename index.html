@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For Shefali 💖</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Segoe UI",sans-serif;
+}
+
+body{
+  overflow:hidden;
+  background:black;
+  color:white;
+}
+
+/* COMMON PAGE */
+.page{
+  width:100vw;
+  height:100vh;
+  display:none;
+  position:absolute;
+  text-align:center;
+  padding:40px;
+}
+
+.page.active{display:block}
+
+/* MAGIC PARTICLES */
+.star{
+  position:absolute;
+  width:3px;
+  height:3px;
+  background:white;
+  border-radius:50%;
+  animation:twinkle 6s infinite;
+}
+
+@keyframes twinkle{
+  0%{opacity:0;transform:scale(0)}
+  50%{opacity:1}
+  100%{opacity:0;transform:scale(1.5)}
+}
+
+/* FLOWERS */
+.flower{
+  position:absolute;
+  font-size:24px;
+  animation:fall linear infinite;
+}
+
+@keyframes fall{
+  from{transform:translateY(-10vh) rotate(0deg);opacity:0}
+  20%{opacity:1}
+  to{transform:translateY(110vh) rotate(360deg)}
+}
+
+/* BUTTON */
+button{
+  margin-top:40px;
+  padding:14px 38px;
+  font-size:18px;
+  border:none;
+  border-radius:30px;
+  background:linear-gradient(45deg,#ff5fa2,#ff2e63);
+  color:white;
+  cursor:pointer;
+  box-shadow:0 0 30px #ff5fa2;
+}
+
+/* ================= PAGE 1 ================= */
+#p1{
+  background:
+  radial-gradient(circle at top,#1b004f,#000),
+  linear-gradient(120deg,#020024,#090979,#ff0080);
+  background-size:300% 300%;
+  animation:bg1 12s infinite alternate;
+}
+
+@keyframes bg1{
+  to{background-position:100% 100%}
+}
+
+.name{
+  margin-top:25vh;
+  font-size:42px;
+  animation:nameGrow 6s forwards;
+  background:linear-gradient(90deg,red,orange,yellow,green,cyan,blue,pink);
+  -webkit-background-clip:text;
+  color:transparent;
+  text-shadow:0 0 50px rgba(255,255,255,0.8);
+}
+
+@keyframes nameGrow{
+  0%{transform:scale(0.2);opacity:0}
+  60%{opacity:1}
+  100%{transform:scale(1.7)}
+}
+
+.cute{
+  margin-top:30px;
+  font-size:20px;
+  color:#ffd1f3;
+  text-shadow:0 0 20px hotpink;
+  animation:pulse 3s infinite;
+}
+
+@keyframes pulse{
+  50%{transform:scale(1.08)}
+}
+
+/* ================= PAGE 2 ================= */
+#p2{
+  background:
+  linear-gradient(135deg,#1d2671,#c33764,#ffdde1);
+  background-size:300% 300%;
+  animation:bg2 10s infinite alternate;
+  animation:fadeIn 1.5s;
+}
+
+@keyframes bg2{
+  to{background-position:100% 0%}
+}
+
+@keyframes fadeIn{
+  from{opacity:0}
+  to{opacity:1}
+}
+
+.award{
+  margin-top:18vh;
+  font-size:36px;
+}
+
+.award span{
+  font-size:46px;
+  color:#ffb6ff;
+  text-shadow:0 0 35px hotpink;
+}
+
+.text{
+  margin:30px 80px;
+  font-size:18px;
+  line-height:1.8;
+}
+
+.pink{color:#ffd1f3;text-shadow:0 0 18px hotpink}
+
+/* ================= PAGE 3 ================= */
+#p3{
+  background:
+  linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+  background-size:300% 300%;
+  animation:bg3 14s infinite alternate;
+  animation:slideIn 1.5s;
+}
+
+@keyframes bg3{
+  to{background-position:100% 100%}
+}
+
+@keyframes slideIn{
+  from{transform:translateX(100%)}
+  to{transform:translateX(0)}
+}
+
+.blue{color:#b3e5ff;text-shadow:0 0 18px #6ec6ff}
+.gold{color:#ffe082;text-shadow:0 0 18px #ffe082}
+
+/* ================= PAGE 4 ================= */
+#p4{
+  background:
+  radial-gradient(circle,#3b0057,#000);
+  animation:zoomIn 1.5s;
+}
+
+@keyframes zoomIn{
+  from{transform:scale(0.6);opacity:0}
+  to{transform:scale(1);opacity:1}
+}
+
+.rotate{
+  margin-top:22vh;
+  font-size:44px;
+  color:#ffb6ff;
+  animation:spinGlow 7s infinite linear;
+}
+
+@keyframes spinGlow{
+  50%{text-shadow:0 0 60px pink}
+  100%{transform:rotate(360deg)}
+}
+
+/* BALLOONS */
+.balloon{
+  position:absolute;
+  bottom:-20%;
+  font-size:42px;
+  animation:balloon 6s infinite ease-in;
+}
+
+@keyframes balloon{
+  to{transform:translateY(-130vh)}
+}
+</style>
+</head>
+
+<body>
+
+<!-- PAGE 1 -->
+<div class="page active" id="p1">
+  <h1 class="name">SHEFALI ✨</h1>
+  <p class="cute">The cutest soul with the sweetest vibe 💖🌸</p>
+  <button onclick="go(1)">Enter Magic 💫</button>
+</div>
+
+<!-- PAGE 2 -->
+<div class="page" id="p2">
+  <h2 class="award">
+    🏆 Singing Award Goes To  
+    <span>Cutieeee Shefalii 💕</span>
+  </h2>
+
+  <p class="text pink">
+    Tumhari singing ek soft magic jaisi hai 🌸  
+    Har note dil ko touch karta hai 💫  
+    Tumhari awaaz sweet bhi hai aur soothing bhi ✨  
+    Tum gaati ho toh sab kuch calm lagta hai 🎶  
+    Tum sirf gaati nahi, tum feelings create karti ho 💖
+  </p>
+
+  <button onclick="go(2)">Next 🎶</button>
+</div>
+
+<!-- PAGE 3 -->
+<div class="page" id="p3">
+  <h2 class="gold">✨ Her Beauty & Vibe ✨</h2>
+
+  <p class="text blue">
+    Tumhari beauty natural aur calm hai 🌷  
+    Tumhari baatein soft aur comforting hoti hain 💙  
+    Tumhari cuteness effortless hai 🌸  
+    Tumhari vibe positive aur warm hai ✨  
+    Tumhara presence hi kisi ka din bright kar deta hai 💖
+  </p>
+
+  <button onclick="go(3)">Next 🌸</button>
+</div>
+
+<!-- PAGE 4 -->
+<div class="page" id="p4">
+  <h1 class="rotate">Will you be my one & only bestiee? 💞</h1>
+
+  <p class="text pink">
+    Yeh sawal dil se aaya hai 💖  
+    Agar “No”, toh poori respect 🌸  
+    Agar “Yes”, toh bohot saari khushi 🥹✨  
+    Tumhari comfort sabse important hai 💫  
+    Tum jaisi bestie milna lucky hota hai 💕
+  </p>
+</div>
+
+<script>
+function go(n){
+  document.getElementById("p"+n).classList.remove("active");
+  document.getElementById("p"+(n+1)).classList.add("active");
+}
+
+/* FLOWERS */
+const flowers=["🌸","🌼","🌷","💐","🌹"];
+setInterval(()=>{
+  let f=document.createElement("div");
+  f.className="flower";
+  f.innerText=flowers[Math.floor(Math.random()*flowers.length)];
+  f.style.left=Math.random()*100+"vw";
+  f.style.animationDuration=(3+Math.random()*4)+"s";
+  document.body.appendChild(f);
+  setTimeout(()=>f.remove(),7000);
+},220);
+
+/* STARS */
+for(let i=0;i<80;i++){
+  let s=document.createElement("div");
+  s.className="star";
+  s.style.left=Math.random()*100+"vw";
+  s.style.top=Math.random()*100+"vh";
+  s.style.animationDelay=Math.random()*6+"s";
+  document.body.appendChild(s);
+}
+
+/* BALLOONS */
+for(let i=0;i<12;i++){
+  let b=document.createElement("div");
+  b.className="balloon";
+  b.innerText="🎈";
+  b.style.left=Math.random()*100+"vw";
+  b.style.animationDuration=(4+Math.random()*4)+"s";
+  document.getElementById("p4").appendChild(b);
+}
+</script>
+
+</body>
+</html>
